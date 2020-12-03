@@ -10,8 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
   </head>
   <body>
+      <!-- NAV BLAR -->
     <nav class="nav-bar">
         <div class="container ">
             <h1 class="logo">Ultra shoes</h4>
@@ -29,12 +31,17 @@
         </div>
       
     </nav>
+    <!-- MAIN -->
     <div class="container whith-nav">
         <div class="row">
             <div class="half">
                 <p class="text text-pretitle">
-                    We are
+                    
+                        We
+                    
+                        are
                 </p>
+             
                 <h5 class="text text-title">
                     Ultra shoes
                 </h5>
@@ -59,4 +66,55 @@
        
     </div>
   </body>
+  <script lang="javscript">
+      
+    let text = document.getElementsByClassName('text');
+    console.log(text);
+      const timeline =  gsap.timeline();
+      timeline.
+        from('.img',{
+            x:"100%" ,
+            y:"-100%" ,
+            opacity:0,
+            duration: 0.6,
+        }).
+        from(text,{
+                x: "-500px",
+                duration: 1,
+                opacity:0,
+                ease:"expo.out",
+                stagger:{
+                    amount:1,
+                }
+
+        }).from('.button',{
+            scale:0,
+            opacity:0,
+            duration: 0.6,
+            ease: 'power4.easIn',
+            stagger: {
+                from :1,
+                amount: -0.2
+            }
+        }).
+        from('.logo',{
+            y: -100,
+            opacity:0,
+            duration:0.5,
+            ease: "expo.inOut"           
+            })
+        .from('.link',{
+            y: -100,
+            opacity:0,
+            duration: 0.75,
+            ease:"bounce.out",
+            
+            stagger:{
+                from:0,
+                amount:0.1,
+            }
+        });
+
+        timeline.play();
+  </script>
 </html>
