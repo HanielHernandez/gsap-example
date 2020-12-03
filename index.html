@@ -80,7 +80,7 @@
         }).
         from(text,{
                 x: "-500px",
-                duration: 1,
+                duration: 0.6,
                 opacity:0,
                 ease:"expo.out",
                 stagger:{
@@ -90,8 +90,8 @@
         }).from('.button',{
             scale:0,
             opacity:0,
-            duration: 0.6,
-            ease: 'power4.easIn',
+            duration: 0.3,
+            ease: 'back.out',
             stagger: {
                 from :1,
                 amount: -0.2
@@ -101,7 +101,7 @@
             y: -100,
             opacity:0,
             duration:0.5,
-            ease: "expo.inOut"           
+            ease: "ower4.easIn"           
             })
         .from('.link',{
             y: -100,
