@@ -144,8 +144,10 @@ body {
 
 .text-title {
   color: #114d8b;
-  font-size: 6em;
+  font-size: 5em;
+  text-transform: uppercase;
   font-weight: bold;
+  letter-spacing: 1.2;
 }
 
 .text.post-title {
